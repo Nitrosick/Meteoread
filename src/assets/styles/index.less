@@ -1,0 +1,46 @@
+@import './variables';
+@import './common';
+
+#app {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr;
+    gap: 30px;
+}
+
+.block {
+    background-color: @color-block-background;
+    border: 1px solid @color-border;
+    border-radius: 30px;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+}
+
+@media screen and (max-width: 1200px) {
+    #app {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #app {
+        gap: 15px;
+    }
+
+    .block {
+        border-radius: 15px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #app {
+        display: flex;
+        flex-direction: column;
+    }
+}

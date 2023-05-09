@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', 'Calibri', sans-serif;
+    font-size: @font-standard;
+    color: @color-main-text;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: @color-background;
+    background-image: url(/src/assets/images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: overlay;
+}
+
+a {
+    color: @color-main-text;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: @color-main-text;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+input,
+select {
+    background-color: transparent;
+    color: @color-main-text;
+    font-size: @font-standard;
+    border: none;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: @color-subtext;
+    }
+}
